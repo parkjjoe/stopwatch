@@ -3,7 +3,7 @@
 module counter( // 10bit counter
               clk,
               hard_reset,
-            dp_count); // 10bit counter
+              dp_count); // 10bit counter
 
 parameter N=10;
 input clk;
