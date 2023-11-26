@@ -35,8 +35,8 @@ sec_counter U0_sec_counter(
                         );
 
 start_fsm U0_start_fsm(.clk(clk),
-							  .start(start),
-							  .new_start(new_start));
+			.start(start),
+			.new_start(new_start));
                         
 stopwatch_fsm U1_stopwatch_fsm(
                            .clk(clk),
@@ -60,7 +60,3 @@ timer U2_timer(
             );
             
           endmodule                          
-                
-                    
-                 
-   
