@@ -1,3 +1,7 @@
+// Since the system clock is 50MHz, every 500,000th count corresponds to 0.01 seconds.
+// The segments 'd', 'e', 'f', and 'h' are designed to reset to 0 when they reach 10. The segments 'g' and 'i' are designed to reset to 0 when they reach 6.
+// If the previous value exceeds 10 or 6, the number in the next unit increases by +1.
+// When a soft_reset or hard_reset is received, all segments return to 0.
 module timer(
   clk,
   hard_reset,
