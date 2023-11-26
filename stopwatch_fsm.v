@@ -18,13 +18,13 @@ parameter T0 = 2'b00;  // base
 parameter T1 = 2'b01; // count up
 parameter T2 = 2'b10; // stop
 
-//state registor 
+// state registor 
 always@(posedge clk or negedge hard_reset) begin
   if(~hard_reset) state <= T0;
   else state <= nextstate;
   end
   
- //next state logic 
+ // next state logic 
  always@(state or start or soft_reset) begin
     if(~soft_reset)
       nextstate = T0;
@@ -41,7 +41,7 @@ always@(posedge clk or negedge hard_reset) begin
   end
 end
 
-//output logic
+// output logic
 always@(state)begin
   case (state)
     T1: en = T1;
