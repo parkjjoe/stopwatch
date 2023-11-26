@@ -1,7 +1,5 @@
-"""
-A counter module that determines the time for one segment to display a number when displaying six segments sequentially.
-The number of bits (N) of the 2bit up counter was changed to 10.
-"""
+// A counter module that determines the time for one segment to display a number when displaying six segments sequentially.
+// The number of bits (N) of the 2bit up counter was changed to 10.
 module counter( // 10bit counter
               clk,
               hard_reset,
