@@ -1,3 +1,8 @@
+// The system clock is set at 50MHz, hence I set sec_count to 19bits.
+// When hard_reset is pressed, sec_count is reset to 0. When 'en' is T0, a wait state, so the value of sec_count remains unchanged at 0.
+// When 'en' is T1, indicating the start button has been pressed, so sec_count increases by 1.
+// When 'en' is T2, representing a state where the stopwatch has been started and then paused, sec_count maintains the same value.
+// Since sec_count is 19bits, it counts up to 520,000 and the time is delayed, so it was hard-coded to 500,000.
 module sec_counter(
               clk,
               hard_reset,
