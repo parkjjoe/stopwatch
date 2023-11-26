@@ -59,4 +59,5 @@ timer U2_timer(
             .i(i)
             );
             
-          endmodule                          
+endmodule
+
