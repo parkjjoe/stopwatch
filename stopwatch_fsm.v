@@ -14,9 +14,9 @@ output reg [1:0] en;
 reg [1:0] state;
 reg [1:0] nextstate;
 
-parameter T0 = 2'b00;  //base
-parameter T1 = 2'b01; //countup
-parameter T2 = 2'b10; //stop
+parameter T0 = 2'b00;  // base
+parameter T1 = 2'b01; // count up
+parameter T2 = 2'b10; // stop
 
 //state registor 
 always@(posedge clk or negedge hard_reset) begin
