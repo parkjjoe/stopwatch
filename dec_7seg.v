@@ -1,3 +1,5 @@
+// When 4 bits are input to the segments, this code calculates these values and displays them on the segment.
+// Dot was used to distinguish minutes, seconds, and 1/100 seconds.
 module dec_7seg ( // 7 segment decoder
 		a, // 4 bit input
 		seg,
