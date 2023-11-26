@@ -1,3 +1,8 @@
+// To display minutes, seconds, and 1/100 seconds in the segment, timer's 'd', 'e', 'f', 'g', 'h', and 'i' are added as input.
+// 'd' must be shown in units of 1/100 second, 'e' must be shown in units of 1/10 second, 'f' must be shown in units of 1 second, 'g' must be shown in units of 10 seconds, 'h' must be shown in units of 1 minute, and 'i' must be shown in units of 10 minutes.
+// To display '0' on the far-right segment when pressing the hard_reset for initialization, it was programmed as S5.
+// When dp_count reaches 10’h3FF, it moves to the next state.
+// It appears that 6 segments are turned on at the same time, because they are turned on very quickly in order from S0 to S5 according to dp_count.
 module dp_fsm(
 clk, hard_reset, dot,
 dp_count, // count value
@@ -65,12 +70,12 @@ always @ (state) begin
   end
   else if (state==S2) begin
     a=g;
-   dot=0;
+    dot=0;
     seg_sel=6'h08;
   end
   else if (state==S3) begin
     a=f;
-   dot=1;
+    dot=1;
     seg_sel=6'h04;
   end
   else if (state==S4) begin
@@ -80,7 +85,7 @@ always @ (state) begin
   end
   else if (state==S5) begin
     a=d;
-    dot = 0;
+    dot=0;
     seg_sel=6'h01;
   end
 end
